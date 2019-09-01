@@ -1,5 +1,66 @@
-.container {
+@font-face {
+    font-family: whitney;
+    src: url(./whitney.otf);
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #36393F;
+    min-height: 100vh;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    font-family: whitney;
+}
+
+.container {
+    width: 320px;
+    display: flex;
+    padding: 16px 0;
+}
+
+.container:not(:last-of-type) {
+    border-bottom: 1px solid hsla(0,0%,100%,.04);;
+}
+
+
+.image-container img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.text-container {
+    margin-left: 16px;
+    flex-grow: 1;
+}
+
+.author {
+    height: 1.3em;
+}
+
+.name {
+    color: #FFFFFF;
+}
+
+.name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.time {
+    color: hsla(0,0%,100%,.2);
+    font-size: 0.75rem;
+    margin-left: .3rem;
+}
+
+.text-content {
+    color: #dcddde;
+    line-height:1.3em;
+    font-size: 15px;
 }
