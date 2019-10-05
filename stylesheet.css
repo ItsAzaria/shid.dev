@@ -65,3 +65,33 @@ body {
     line-height:1.3em;
     font-size: 15px;
 }
+
+.reaction {
+    margin-top: 8px;
+    background-color: #42454A;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+.reaction:hover {
+    cursor: pointer;
+}
+
+.reaction:hover .amount {
+    color: #dcddde;
+}
+
+.reaction img{
+    height: 1rem;
+    width: 1rem;
+}
+
+.amount {
+    color: #72767d;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-left: 4px;
+
+}
