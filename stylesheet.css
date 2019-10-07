@@ -75,6 +75,14 @@ body {
     padding: 2px 4px;
 }
 
+.reaction.reacted {
+    background-color: rgba(114, 137, 218, 0.3);
+}
+
+.starred {
+    color: #7289da!important;
+}
+
 .reaction:hover {
     cursor: pointer;
 }

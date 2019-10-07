@@ -22,12 +22,35 @@
           <div class="text-content">
             <p>Snooping on my domain are we? BE GONE</p>
           </div>
-          <div class="reaction">
+          <div id="starboard" class="reaction">
             <img src="https://discordapp.com/assets/e4d52f4d69d7bba67e5fd70ffe26b70d.svg" />
-            <span class="amount">69</span>
+            <span id="stars" class="amount" data-stars="69">69</span>
           </div>
         </div>
     </div>
+    <script>
+        // ES5 for that sick ie support :yeet:
+        var stars = document.getElementById('stars')
+        var starboard = document.getElementById('starboard')
+
+        function update(el, count) {
+            el.dataset.stars = count
+            el.innerText = count
+            
+        }
+
+        starboard.addEventListener('click', function () {
+            var count = parseInt(stars.dataset.stars)
+            starboard.classList.toggle('reacted')
+            stars.classList.toggle('starred')
+
+            if (count === 69) {
+                update(stars, count + 1)
+            } else {
+                update(stars, count - 1)
+            }
+        })
+    </script>
 </body>
 </html>
 
