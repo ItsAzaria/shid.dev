@@ -41,26 +41,42 @@
           </div>
         </div>
     </div>
+
+    <audio id="poopiePlayer">
+      <source src="poopie.wav" type="audio/wav">
+    </audio>
+
     <script>
         // ES5 for that sick ie support :yeet:
-        var stars = document.getElementById('stars')
-        var starboard = document.getElementById('starboard')
+        var stars = document.getElementById('stars');
+        var starboard = document.getElementById('starboard');
+        var audio = document.getElementById('poopiePlayer');
 
         function update(el, count) {
-            el.dataset.stars = count
-            el.innerText = count
-            
+            el.dataset.stars = count;
+            el.innerText = count;
         }
 
+        function playPoopie() {
+          audio.currentTime = 0;
+          audio.play();
+
+          setTimeout(function() {
+            playPoopie();
+          }, Math.random() * 10000);
+        }
+
+        playPoopie();
+
         starboard.addEventListener('click', function () {
-            var count = parseInt(stars.dataset.stars)
-            starboard.classList.toggle('reacted')
-            stars.classList.toggle('starred')
+            var count = parseInt(stars.dataset.stars);
+            starboard.classList.toggle('reacted');
+            stars.classList.toggle('starred');
 
             if (count === 69) {
-                update(stars, count + 1)
+                update(stars, count + 1);
             } else {
-                update(stars, count - 1)
+                update(stars, count - 1);
             }
         })
     </script>
