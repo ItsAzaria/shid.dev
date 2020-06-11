@@ -5,6 +5,7 @@
 
 * {
     user-select: none;
+    cursor: url(blaze.png), auto;
 }
 
 p {
