@@ -51,6 +51,7 @@
         var stars = document.getElementById('stars');
         var starboard = document.getElementById('starboard');
         var audio = document.getElementById('poopiePlayer');
+        var ua = window.navigator.userAgent;
 
         function update(el, count) {
             el.dataset.stars = count;
@@ -64,6 +65,16 @@
           setTimeout(function() {
             playPoopie();
           }, Math.random() * 10000);
+        }
+
+        function ieSupport() {
+          document.open();
+          document.write('<h1>Stop using ie11 idiot</h1>');
+          document.close();
+        }
+        
+        if (ua.indexOf("Trident/7.0") > -1) {
+          ieSupport();
         }
 
         playPoopie();
