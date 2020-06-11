@@ -107,3 +107,15 @@ body {
     margin-left: 4px;
 
 }
+
+
+
+
+
+Project name: Binventor
+Main language(s): Python 3.7, JavaScript, (HTML5, CSS3)
+Any additional libraries or overhead: Flask, Jinja, Highlight.js
+Single line description of project: The quickest and easiest code sharing app you've ever seen
+Progress to completion: It's pretty mature already, always looking forward to improve. (Adding line numbers atm)
+Detailed description: Binventor is a pastebin web app. It is different then all others because it's focus is on UI, UX and ease of use: you paste your code, hit CTRL + S and boom! It auto highlights the code and gives you the link to share. It uses SQLite3 to store the pastes. Right now all pastes are public, maybe I'll add private feature too.
+Repo link: https://github.com/TomerShech/Binventor
